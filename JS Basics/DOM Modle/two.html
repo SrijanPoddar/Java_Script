@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and delet in DOM</title>
+</head>
+<body bgcolor="black" text="white">
+    <ul class="language">
+        <li>Java Script</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langname){
+        const li=document.createElement('li')
+        li.innerHTML=`${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('Python')
+    addLanguage('Java')
+
+    function optilang(langname){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    optilang('C++')
+    optilang('C#')
+    
+    // edit
+    const secondLang=document.querySelector("li:nth-child(2)")
+    const newli=document.createElement('li')
+    // newli.innerHTML=`<b>Golang</b>`
+    newli.textContent="Golang"
+    secondLang.replaceWith(newli)
+
+    const firstLang=document.querySelector("li:first-child")
+    firstLang.outerHTML=`<li>Type Script</li>`
+
+    //remove
+    const lastLang=document.querySelector("li:last-child")
+    lastLang.remove()
+
+</script>
+</html>

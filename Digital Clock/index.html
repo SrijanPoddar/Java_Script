@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Your Local Time</title>
+        <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        /* New gradient background from brown to lighter blue */
+        background: linear-gradient(45deg, #5d4037, #81d4fa); /* Lighter blue */
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      #banner span {
+        font-size: 36px;
+        font-weight: 600;
+        color: #f1f1f1; /* Soft white for the banner text */
+        margin-bottom: 20px;
+      }
+
+      #clock {
+        font-size: 48px;
+        background: linear-gradient(to right, #81d4fa, #4fc3f7); /* Lighter blue gradient */
+        padding: 20px 60px;
+        border-radius: 15px;
+        color: #ffffff;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+      }
+    </style>
+    </head>
+    <body>
+        <div class="center">
+            <div id="banner"><span>Your Local Time</span></div>
+            <div id="clock"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

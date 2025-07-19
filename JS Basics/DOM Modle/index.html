@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="black" text="white">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+    </div>
+<script>
+    let parent=document.querySelector('.parent')
+    console.log(parent)
+    console.log(parent.children)//HTMLCollection(4) [div.day, div.day, div.day, div.day]
+    parent.children[0].style.color="red";
+    parent.children[3].style.color="blue";
+    parent.children[1].innerText="Tuesday is the second day"
+    console.log(parent.firstElementChild)//div.day Manday
+    console.log(parent.lastElementChild)//div.day Thrusday
+    console.log(parent.childElementCount)//4
+        
+</script>
+</body>
+</html>

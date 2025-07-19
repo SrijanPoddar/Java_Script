@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Image List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #121212;
+        color: #ffffff;
+      }
+      h1 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: #00bcd4;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+      .image-container {
+        margin: 0 auto;
+        max-width: 600px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #1e1e1e;
+        border: 1px solid #333;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+      li:hover {
+        transform: scale(1.02);
+        background-color: #292929;
+      }
+      img {
+        max-width: 100px;
+        max-height: 100px;
+        margin-right: 15px;
+        border-radius: 8px;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+      }
+      img:hover {
+        transform: scale(1.05);
+      }
+      a {
+        color: #00bfff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      a:hover {
+        color: #1e90ff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image List</h1>
+    <div class="image-container">
+      <ul id="images">
+        <li>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
+            id="trans" alt="Transparent PNG">
+          <span>Transparent PNG Sample</span>
+        </li>
+        <li>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Happy_smiley_face.png/800px-Happy_smiley_face.png"
+            id="happy" alt="Smiley Face">
+          <span>Happy Smiley Face</span>
+        </li>
+        <li>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png"
+            id="insta" alt="Instagram Icon">
+          <span>Instagram Icon</span>
+        </li>
+        <li>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+            id="fb" alt="Facebook Logo">
+          <span>Facebook Logo</span>
+        </li>
+        <li>
+          <a href="https://www.google.com" target="_blank" rel="noopener"
+            id="google">Google</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    document.getElementById('trans').addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('Transparent PNG clicked!');
+    }, false);
+
+    document.getElementById('google').addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('Google link clicked!');
+    }, false);
+
+    document.getElementById('images').addEventListener('click', function(e) {
+      if (e.target.tagName === 'IMG') {
+        e.target.parentNode.remove();
+      }
+    }, false);
+  </script>
+</html>
